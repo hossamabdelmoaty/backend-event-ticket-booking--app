@@ -1,0 +1,12 @@
+type Event {
+  id: ID!
+  title: String!
+  description: String
+  date: DateTime!
+  location: String!
+  totalTickets: Int!
+  availableTickets: Int!
+  price: Float!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+} 

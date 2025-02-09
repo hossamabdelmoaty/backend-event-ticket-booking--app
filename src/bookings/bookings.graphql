@@ -1,0 +1,36 @@
+type Booking {
+  id: ID!
+  user: User!
+  event: Event!
+  numberOfTickets: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+input CreateBookingInput {
+  eventId: ID!
+  numberOfTickets: Int!
+}
+
+input BookingFilterInput {
+  userId: ID
+  eventId: ID
+  createdFrom: DateTime
+  createdTo: DateTime
+}
+
+type PaginatedBookingsResponse {
+  items: [Booking!]!
+  total: Int!
+  page: Int!
+  limit: Int!
+}
+
+type Query {
+  booking(id: ID!): Booking!
+  bookings(filter: BookingFilterInput, pagination: PaginationInput): PaginatedBookingsResponse!
+}
+
+type Mutation {
+  createBooking(userId: ID!, input: CreateBookingInput!): Booking!
+} 
