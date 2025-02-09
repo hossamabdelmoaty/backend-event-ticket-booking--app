@@ -23,8 +23,8 @@ DB_HOST=localhost
 DB_PORT=5432
 DB_USERNAME=postgres
 DB_PASSWORD=postgres
-DB_NAME=event_ticket_booking
-DB_SCHEMA=event_booking_2
+DB_NAME=event_ticket_booking_db
+DB_SCHEMA=event_booking_schema
 DB_SSL_ENABLED=false
 ```
 
